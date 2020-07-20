@@ -1,0 +1,34 @@
+# see https://symfony.com/doc/current/reference/configuration/framework.html
+framework:
+    property_info: true
+    http_client:
+        default_options:
+            max_redirects: 7
+        max_host_connections: 10
+        scoped_clients:
+            example_api:
+                base_uri: 'https://sandbox2.ibanfirst.com/api'
+
+                # HTTP Basic authentication
+                auth_basic: 'the-username:the-password'
+
+                # HTTP Bearer authentication (also called token authentication)
+                auth_bearer: the-bearer-token
+
+                # Microsoft NTLM authentication
+                auth_ntlm: 'the-username:the-password'
+    secret: '%env(APP_SECRET)%'
+    #csrf_protection: true
+    #http_method_override: true
+
+    # Enables session support. Note that the session will ONLY be started if you read or write from it.
+    # Remove or comment this section to explicitly disable session support.
+    session:
+        handler_id: null
+        cookie_secure: auto
+        cookie_samesite: lax
+
+    #esi: true
+    #fragments: true
+    php_errors:
+        log: true

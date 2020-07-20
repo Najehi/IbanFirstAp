@@ -112,11 +112,10 @@ class WalletService
         $parameters = array_merge($parameters, ['headers' => ['X-WSSE' => $this->generateWsseToken()]]);
         try {
             $response = $this->client->request($method, $this->generateUrl($path), $parameters);
-
             $code = $response->getStatusCode();
-            dump($response->getContent()); die;
-            if ($code >= 200 && $code < 301) {
-                return $response->getContent();
+
+            if ($code >= Response::HTTP_OK && $code < Response::HTTP_MOVED_PERMANENTLY) {
+                return $response;
             }
             $this->logger->error("Error happen while calling $method $path with message with code error $code and content " . $response->getContent(false));
             throw new \Exception($code, 'Error');

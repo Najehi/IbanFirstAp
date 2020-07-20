@@ -37,7 +37,7 @@ GET http://localhost:8000/financialMovements/history  //Retrieve financial movem
 GET http://localhost:8000/financialMovements/-{id}  //Retrieve financial movements details
 
 
-#Unit test, Run phpunit with the command
+#Functional test, Run phpunit with the command
 ## .\vendor\bin\simple-phpunit
 
 

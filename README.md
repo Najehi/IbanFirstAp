@@ -1,7 +1,7 @@
 IbanFrst
 ============
 
-A Symfony 4.4 project.
+A Symfony 4.4.10 project.
 
 #Install project #clone project from Github 
 

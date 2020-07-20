@@ -5,7 +5,7 @@ A Symfony 4.4.10 project.
 
 #Install project #clone project from Github 
 
-## git clone https://github.com/Najehi/IbanFirst.git
+## git clone https://github.com/Najehi/IbanFirstAp.git
 
 #install dependencies
 

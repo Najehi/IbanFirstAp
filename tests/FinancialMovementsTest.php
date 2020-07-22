@@ -22,7 +22,7 @@ class FinancialMovementsTest extends WebTestCase
         $response = $client->getResponse();
         $this->assertTrue($response->headers->contains('Content-Type', 'application/json'), $response->headers);
         $this->assertJson($response->getContent());
-        $this->assertEqual(Response::HTTP_OK, $response->getStatusCode(), $response->getContent());
+        $this->assertEquals(Response::HTTP_OK, $response->getStatusCode(), $response->getContent());
 
 
     }
